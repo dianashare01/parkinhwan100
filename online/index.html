@@ -39,7 +39,7 @@
     <p class="eyebrow">ONLINE EXHIBITION · 3D WALKTHROUGH</p>
     <h1>전시장을 그대로, 온라인에서</h1>
     <p class="desc">계동길 77의 빨간 문부터 옥상까지, 열 개의 공간을 3D로 옮겼습니다.<br>멀리 있어도 서가 사이를 걷고, 시인의 목소리를 들을 수 있습니다.</p>
-    <a class="btn-red" href="#rooms"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 3l9 5-9 5V3Z" fill="#EFE6D2"/></svg>온라인 전시관 입장하기</a>
+    <a class="btn-red" href="#rooms" data-soon><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 3l9 5-9 5V3Z" fill="#EFE6D2"/></svg>온라인 전시관 입장하기</a>
   </div>
 </section>
 
@@ -47,16 +47,16 @@
   <div class="wrap-narrow">
     <h2>전시실 선택</h2>
     <div class="room-grid">
-      <a class="tile" href="../#room-01"><img src="../img/room01.jpg" alt="" style="object-position:50% 20%" loading="lazy"><span class="no">01</span><span class="name">안내데스크 · 굿즈샵</span></a>
-      <a class="tile" href="../#room-02"><img src="../img/room02.jpg" alt="" loading="lazy"><span class="no">02</span><span class="name">서문 · 연보의 벽</span></a>
-      <a class="tile" href="../#room-03"><img src="../img/room03.jpg" alt="" loading="lazy"><span class="no">03</span><span class="name">로비 테이블 맵핑</span></a>
-      <a class="tile" href="../#room-04"><img src="../img/room04.jpg" alt="" loading="lazy"><span class="no">04</span><span class="name">마리서사 재현실</span></a>
-      <a class="tile" href="../#room-05"><img src="../img/room05.jpg" alt="" loading="lazy"><span class="no">05</span><span class="name">골방 프로젝션룸</span></a>
-      <a class="tile" href="../#room-06"><img src="../img/room03.jpg" alt="" style="object-position:50% 80%" loading="lazy"><span class="no">06</span><span class="name">낭독실</span></a>
-      <a class="tile" href="../#room-07"><img src="../img/room07.jpg" alt="" loading="lazy"><span class="no">07</span><span class="name">타자기 방</span></a>
-      <a class="tile" href="../#room-08"><img src="../img/room08.jpg" alt="" loading="lazy"><span class="no">08</span><span class="name">목마 포토존</span></a>
-      <a class="tile" href="../#poem"><img src="../img/room09.jpg" alt="" loading="lazy"><span class="no">09</span><span class="name">1956 대폿집 바</span></a>
-      <a class="tile" href="../#room-10"><img src="../img/room10.jpg" alt="" loading="lazy"><span class="no">10</span><span class="name">옥상 빨간 문 포토존</span></a>
+      <a class="tile" data-soon href="../#room-01"><img src="../img/room01.jpg" alt="" style="object-position:50% 20%" loading="lazy"><span class="no">01</span><span class="name">안내데스크 · 굿즈샵</span></a>
+      <a class="tile" data-soon href="../#room-02"><img src="../img/room02.jpg" alt="" loading="lazy"><span class="no">02</span><span class="name">서문 · 연보의 벽</span></a>
+      <a class="tile" data-soon href="../#room-03"><img src="../img/room03.jpg" alt="" loading="lazy"><span class="no">03</span><span class="name">로비 테이블 맵핑</span></a>
+      <a class="tile" data-soon href="../#room-04"><img src="../img/room04.jpg" alt="" loading="lazy"><span class="no">04</span><span class="name">마리서사 재현실</span></a>
+      <a class="tile" data-soon href="../#room-05"><img src="../img/room05.jpg" alt="" loading="lazy"><span class="no">05</span><span class="name">골방 프로젝션룸</span></a>
+      <a class="tile" data-soon href="../#room-06"><img src="../img/room03.jpg" alt="" style="object-position:50% 80%" loading="lazy"><span class="no">06</span><span class="name">낭독실</span></a>
+      <a class="tile" data-soon href="../#room-07"><img src="../img/room07.jpg" alt="" loading="lazy"><span class="no">07</span><span class="name">타자기 방</span></a>
+      <a class="tile" data-soon href="../#room-08"><img src="../img/room08.jpg" alt="" loading="lazy"><span class="no">08</span><span class="name">목마 포토존</span></a>
+      <a class="tile" data-soon href="../#poem"><img src="../img/room09.jpg" alt="" loading="lazy"><span class="no">09</span><span class="name">1956 대폿집 바</span></a>
+      <a class="tile" data-soon href="../#room-10"><img src="../img/room10.jpg" alt="" loading="lazy"><span class="no">10</span><span class="name">옥상 빨간 문 포토존</span></a>
       <div class="tile-tip"><b>TIP</b><span>각 전시실 안에서도 QR 시어를 찾을 수 있습니다. 온라인에서 모은 시어는 현장 방문 시 바에서 그대로 인정됩니다.</span></div>
     </div>
   </div>
@@ -70,15 +70,14 @@
   </div>
 </footer>
 
-<!-- 오픈 준비중 팝업: 2026-10-29 00:00(KST) 이후 자동으로 안 뜸 -->
+<!-- 오픈 준비중 팝업: '입장하기'·전시실 타일(data-soon)을 누르면 뜸 -->
 <div class="dim" id="popup" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="pop-title">
     <button type="button" class="x" data-close aria-label="닫기"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="#1A1614" stroke-width="1.8" stroke-linecap="round"/></svg></button>
     <svg width="40" height="40" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="5" y="3" width="18" height="22" rx="2" fill="#8E2B23"/><rect x="13.5" y="3" width="1" height="22" fill="#EFE6D2"/><circle cx="11" cy="14" r="1.2" fill="#D9A85C"/><circle cx="17" cy="14" r="1.2" fill="#D9A85C"/></svg>
     <h2 id="pop-title">오픈 준비중입니다</h2>
-    <p>온라인 전시관은 10월 29일 개관과 함께 열립니다</p>
+    <p>온라인 3D 전시관은 곧 열립니다</p>
     <button type="button" class="ok" data-close>확인</button>
-    <label><input type="checkbox" id="pop-today">오늘 하루 보지 않기</label>
   </div>
 </div>
 

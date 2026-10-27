@@ -37,42 +37,27 @@
     });
   });
 
-  // ---------- 오픈 준비중 팝업 ----------
+  // ---------- 오픈 준비중 팝업: data-soon 링크를 누르면 뜸 ----------
   var popup = document.getElementById('popup');
   if (!popup) return;
-  var OPEN_AT = new Date('2026-10-29T00:00:00+09:00').getTime();
-  var SKIP_KEY = 'mrs-popup-skip-until';
-  var SESSION_KEY = 'mrs-popup-closed';
+  var lastFocus = null;
 
-  function store(kind) { try { return window[kind]; } catch (e) { return null; } }
-  var local = store('localStorage');
-  var session = store('sessionStorage');
-  function get(s, k) { try { return s ? s.getItem(k) : null; } catch (e) { return null; } }
-  function set(s, k, v) { try { if (s) s.setItem(k, v); } catch (e) {} }
-
-  var now = Date.now();
-  var skipUntil = Number(get(local, SKIP_KEY) || 0);
-  if (now >= OPEN_AT || now < skipUntil || get(session, SESSION_KEY)) return;
-
-  var lastFocus = document.activeElement;
-  popup.hidden = false;
-  var ok = popup.querySelector('.ok');
-  if (ok) ok.focus();
-
+  function open(e) {
+    e.preventDefault();
+    lastFocus = e.currentTarget;
+    popup.hidden = false;
+    var ok = popup.querySelector('.ok');
+    if (ok) ok.focus();
+    document.addEventListener('keydown', onKey);
+  }
   function close() {
-    var today = document.getElementById('pop-today');
-    if (today && today.checked) {
-      var end = new Date(); end.setHours(24, 0, 0, 0); // 오늘 자정까지
-      set(local, SKIP_KEY, String(end.getTime()));
-    }
-    set(session, SESSION_KEY, '1');
     popup.hidden = true;
     document.removeEventListener('keydown', onKey);
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
   function onKey(e) { if (e.key === 'Escape') close(); }
 
+  document.querySelectorAll('[data-soon]').forEach(function (a) { a.addEventListener('click', open); });
   popup.querySelectorAll('[data-close]').forEach(function (b) { b.addEventListener('click', close); });
   popup.addEventListener('click', function (e) { if (e.target === popup) close(); });
-  document.addEventListener('keydown', onKey);
 })();
