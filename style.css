@@ -40,7 +40,10 @@ h1, h2, h3, p, dl, dd, ol { margin: 0; }
 .tabs a:hover { background: rgba(239, 230, 210, .08); }
 .tabs a[aria-current="page"] { background: var(--red); }
 .lang { display: flex; align-items: center; gap: 4px; padding: 4px; border: 1px solid rgba(239, 230, 210, .2); border-radius: 999px; font-size: 12px; letter-spacing: .06em; }
-.lang span { height: 28px; padding: 0 12px; border-radius: 999px; display: flex; align-items: center; background: var(--gold); color: var(--ink); font-weight: 700; }
+.lang span, .lang a { height: 28px; padding: 0 12px; border-radius: 999px; display: flex; align-items: center; }
+.lang span { background: var(--gold); color: var(--ink); font-weight: 700; }
+.lang a { color: var(--paper); }
+.lang a:hover { background: rgba(239, 230, 210, .08); color: var(--paper); }
 
 /* ---------- Hero ---------- */
 .hero { position: relative; min-height: 582px; padding: 96px 40px 80px; display: flex; align-items: center; overflow: hidden; }
@@ -169,7 +172,7 @@ h1, h2, h3, p, dl, dd, ol { margin: 0; }
   .logo svg { width: 24px; height: 24px; }
   .logo span { font-size: 15px; }
   .lang { padding: 3px; }
-  .lang span { height: 26px; padding: 0 10px; font-size: 11px; }
+  .lang span, .lang a { height: 26px; padding: 0 10px; font-size: 11px; }
   .tabs { order: 3; width: 100%; overflow-x: auto; border: 0; padding: 0; scrollbar-width: none; }
   .tabs a { flex: none; height: 34px; padding: 0 14px; font-size: 13px; border: 1px solid rgba(239, 230, 210, .2); }
   .tabs a[aria-current="page"] { border-color: var(--red); }

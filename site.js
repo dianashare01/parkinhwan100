@@ -7,7 +7,9 @@
   function syncToggle() {
     if (!toggle) return;
     var allOpen = rooms.every(function (d) { return d.open; });
-    toggle.textContent = allOpen ? '모두 접기' : '모두 펼치기';
+    toggle.textContent = allOpen
+      ? (toggle.getAttribute('data-label-close') || '모두 접기')
+      : (toggle.getAttribute('data-label-open') || '모두 펼치기');
   }
   if (toggle) {
     toggle.addEventListener('click', function () {
